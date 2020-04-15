@@ -12,7 +12,9 @@ namespace WebShop.Model
         [ForeignKey("User")]
         public int CartID { get; set; }
 
-        
+        /// <summary>
+        /// 废弃属性 等同于 CartID
+        /// </summary>
         public int UserID { get; set; }
 
         public int ProductCount { set; get; }
