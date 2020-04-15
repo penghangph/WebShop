@@ -13,7 +13,7 @@ namespace WebShop.Model
         [Key]
         public int CIID { set; get; }
 
-        
+        //外键
         public int ProductID { set; get; }
 
         
