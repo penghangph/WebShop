@@ -9,10 +9,10 @@ namespace WebShop.Model
 {
     public class Cart
     {
-        [Key]
+        [ForeignKey("User")]
         public int CartID { get; set; }
 
-        [ForeignKey("UserID")]
+        
         public int UserID { get; set; }
 
         public int ProductCount { set; get; }
@@ -21,7 +21,10 @@ namespace WebShop.Model
 
 
         #region 导航属性
-        public User User { set; get; }
+        
+        public virtual User User { set; get; }
+
+
         public List<CartItem> CartItems { set; get; }
         #endregion
     }

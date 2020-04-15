@@ -12,17 +12,20 @@ namespace WebShop.Model
         [Key]
         public int ODID { get; set; }
 
-        [ForeignKey("ProductID")]
-        public string ProductID { get; set; }
+        
+        public int ProductID { get; set; }
         public int Count { get; set; }
         public double CurrentPrice { get; set; }
 
-        [ForeignKey("OrderID")]
+        
         public int OrderID { get; set; }
 
 
         #region 导航属性
+        [ForeignKey("OrderID")]
         public Order Order { get; set; }
+
+        [ForeignKey("ProductID")]
         public Product Product { get; set; }
         #endregion
     }

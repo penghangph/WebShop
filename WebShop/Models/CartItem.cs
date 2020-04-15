@@ -13,10 +13,10 @@ namespace WebShop.Model
         [Key]
         public int CIID { set; get; }
 
-        [ForeignKey("ProductID")]
+        
         public int ProductID { set; get; }
 
-        [ForeignKey("CartID")]
+        
         public int CartID { get; set; }
         public int Count { set; get; }
 
@@ -27,7 +27,10 @@ namespace WebShop.Model
 
 
         #region 导航属性
+        [ForeignKey("ProductID")]
         public Product Product { set; get; }
+
+        [ForeignKey("CartID")]
         public Cart Cart { set; get; }
         #endregion
     }

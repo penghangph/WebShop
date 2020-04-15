@@ -16,11 +16,12 @@ namespace WebShop.Model
         public string UserAddress { get; set; }
         public string State { get; set; }
 
-        [ForeignKey("UserID")]
+       
         public int UserID { get; set; }
         public double TotalPrice { get; set; }
 
         #region 导航属性
+        [ForeignKey("UserID")]
         public User User { set; get; }
         public List<OrderDetail> OrderDetails { set; get; }
         #endregion

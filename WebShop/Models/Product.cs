@@ -13,7 +13,7 @@ namespace WebShop.Model
         public int ProductID { get; set; }
         public string Title { get; set; }
 
-        [ForeignKey("CateID")]
+        
         public int CateID { get; set; }
         public double MarketPrice { get; set; }
         public double LocalPrice { get; set; }
@@ -23,6 +23,8 @@ namespace WebShop.Model
         public string ImageURL { get; set; }
 
         #region 导航属性
+
+        [ForeignKey("CateID")]
         public ProductCate ProductCate { get; set; }
 
         public List<OrderDetail> OrderDetails { set; get; }

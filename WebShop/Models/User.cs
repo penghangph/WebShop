@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Web;
 
@@ -22,7 +23,7 @@ namespace WebShop.Model
 
 
         #region 导航属性
-        public Cart Cart { set; get; }
+        public virtual Cart Cart { set; get; }
 
         public List<Order> Orders { set; get; }
 
