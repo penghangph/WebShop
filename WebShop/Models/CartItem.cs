@@ -25,7 +25,6 @@ namespace WebShop.Model
         public DateTime AddTime { set; get; }
 
 
-
         #region 导航属性
         [ForeignKey("ProductID")]
         public Product Product { set; get; }
