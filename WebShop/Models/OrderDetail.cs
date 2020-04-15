@@ -22,8 +22,8 @@ namespace WebShop.Model
 
 
         #region 导航属性
-        public virtual Order Order { get; set; }
-        public virtual Product Product { get; set; }
+        public Order Order { get; set; }
+        public Product Product { get; set; }
         #endregion
     }
 }

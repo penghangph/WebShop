@@ -22,9 +22,9 @@ namespace WebShop.Model
 
 
         #region 导航属性
-        public virtual Cart Cart { set; get; }
+        public Cart Cart { set; get; }
 
-        public virtual List<Order> Orders { set; get; }
+        public List<Order> Orders { set; get; }
 
         #endregion
     }

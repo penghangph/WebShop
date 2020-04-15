@@ -14,6 +14,6 @@ namespace WebShop.Model
         public Nullable<int> ParentID { get; set; }
 
        
-        public virtual List<Product> Product { get; set; }
+        public List<Product> Product { get; set; }
     }
 }

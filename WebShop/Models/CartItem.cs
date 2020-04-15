@@ -27,8 +27,8 @@ namespace WebShop.Model
 
 
         #region 导航属性
-        public virtual Product Product { set; get; }
-        public virtual Cart Cart { set; get; }
+        public Product Product { set; get; }
+        public Cart Cart { set; get; }
         #endregion
     }
 }

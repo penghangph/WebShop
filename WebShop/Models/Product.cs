@@ -23,11 +23,11 @@ namespace WebShop.Model
         public string ImageURL { get; set; }
 
         #region 导航属性
-        public virtual ProductCate ProductCate { get; set; }
+        public ProductCate ProductCate { get; set; }
 
-        public virtual List<OrderDetail> OrderDetails { set; get; }
+        public List<OrderDetail> OrderDetails { set; get; }
 
-        public virtual List<CartItem> CartItems { set; get; }
+        public List<CartItem> CartItems { set; get; }
         #endregion
     }
 }

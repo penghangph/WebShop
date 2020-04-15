@@ -21,8 +21,8 @@ namespace WebShop.Model
 
 
         #region 导航属性
-        public virtual User User { set; get; }
-        public virtual List<CartItem> CartItems { set; get; }
+        public User User { set; get; }
+        public List<CartItem> CartItems { set; get; }
         #endregion
     }
 }
