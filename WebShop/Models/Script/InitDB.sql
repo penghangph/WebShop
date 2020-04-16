@@ -21,6 +21,7 @@ select * from ProductCates
 --产品表
 insert into Products values('小米电视4X 55英寸 4K超高清 HDR 蓝牙语音遥控 2GB+8GB 教育电视 人工智能语音网络液晶平板电视 L55M5-AD',5,1799.00,1599.00,'商品名称：小米L55M5-AD商品编号：7641991商品毛重：17.0kg商品产地：中国大陆','2020-4-15 15:04',999,'/image/tv/1.jpg')
 
+select * from Products
 
 
 

@@ -18,7 +18,7 @@ namespace WebShop.Model
         public DbSet<Product> Products { set; get; }
         public DbSet<ProductCate> Cates { set; get; }
 
-        public DbSet<SysUser> SysUsers { set; get; }
+        public DbSet<AdminUsers> AdminUsers { set; get; }
         public DbSet<User> Users { set; get; }
 
     }

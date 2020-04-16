@@ -1,0 +1,29 @@
+﻿@model WebShop.Model.ProductCate
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>EditCate</title>
+</head>
+<body>
+    <div>
+        @using (Html.BeginForm())
+        {
+            @Html.HiddenFor(a => a.CateID)
+            <label>分类名称：</label> @Html.TextBoxFor(a => a.CateName)
+
+            <label>父级编号</label> @Html.DropDownList("pid",ViewBag.list as List<SelectListItem>)
+
+            <input type="submit" value="修改" />
+        }
+
+
+
+    </div>
+</body>
+</html>

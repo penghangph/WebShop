@@ -1,0 +1,26 @@
+﻿@model WebShop.Model.AdminUsers
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>AdminLogin</title>
+</head>
+<body>
+    <div>
+        @using (Html.BeginForm())
+        {
+            <label>用户名：</label> @Html.TextBoxFor(model => model.UserName) <br />
+            <label>密&nbsp;&nbsp;&nbsp;码：</label> @Html.PasswordFor(model => model.PassWord) <br />
+            <input type="submit" value="登录" />
+        }
+
+
+    </div>
+</body>
+</html>

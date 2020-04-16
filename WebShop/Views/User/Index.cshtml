@@ -1,0 +1,40 @@
+﻿
+@{
+    Layout = null;
+    var list = ViewBag.list as List<WebShop.Model.ProductCate>;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <div> 
+        <p>管理产品分类</p>
+        <table>
+            <tr>
+                <td>分类编号</td>
+                <td>分类名称</td>
+                <td>父级编号</td>
+                <td>操作</td>
+            </tr>
+
+            @foreach (var item in list)
+            {
+
+                <tr>
+                    <td>@item.CateID</td>
+                    <td>@item.CateName</td>
+                    <td>@item.ParentID</td>
+                    <td>@Html.ActionLink("编辑","EditCate","Product",new {id=item.CateID },null)</td>
+                </tr>
+            }
+
+        </table>
+    </div>
+    @Html.ActionLink("添加分类","AddCate","Product")
+</body>
+</html>
