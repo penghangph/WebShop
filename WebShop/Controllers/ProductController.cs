@@ -6,9 +6,14 @@ using System.Web.Mvc;
 
 namespace WebShop.Controllers
 {
+    /// <summary>
+    /// 产品有关的控制器
+    /// </summary>
     public class ProductController : Controller
     {
         Model.MyDBContext db = new Model.MyDBContext();
+
+        #region 分类操作
 
         [HttpGet]
         public ActionResult AddCate()
@@ -77,5 +82,22 @@ namespace WebShop.Controllers
             return RedirectToAction("Index","User");
 
         }
+
+        #endregion
+
+        #region 产品操作
+        public ActionResult InitData()
+        {
+            //添加产品
+
+            return Content("");
+        }
+
+        public ActionResult ProductList()
+        {
+            return Content("");
+        }
+        #endregion
+
     }
 }
