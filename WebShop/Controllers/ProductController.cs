@@ -6,6 +6,7 @@ using System.Web.Mvc;
 
 namespace WebShop.Controllers
 {
+    [Authorize]
     /// <summary>
     /// 产品有关的控制器
     /// </summary>
@@ -14,6 +15,7 @@ namespace WebShop.Controllers
         Model.MyDBContext db = new Model.MyDBContext();
 
         #region 分类操作
+
 
         [HttpGet]
         public ActionResult AddCate()
@@ -32,6 +34,7 @@ namespace WebShop.Controllers
             return View();
         }
 
+        [Authorize]
         [HttpPost]
         public ActionResult AddCate(string CateName,int pid)
         {
@@ -43,7 +46,7 @@ namespace WebShop.Controllers
             return RedirectToAction("Index","User");
         }
 
-
+        [Authorize]
         [HttpGet]
         public ActionResult EditCate(int id)
         {
@@ -67,7 +70,7 @@ namespace WebShop.Controllers
             return View(obj);
         }
 
-
+        [Authorize]
         public ActionResult EditCate(int CateID,string CateName,int pid)
         {
             var obj = db.Cates.SingleOrDefault(a=>a.CateID==CateID);
